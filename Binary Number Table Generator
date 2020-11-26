@@ -1,0 +1,26 @@
+n=int(input("Enter n:"))
+a=['0' for i in range(0,n)]
+a1="".join(a)
+a1=int(a1)
+table=[a]
+#print(a)
+for i in range(2**n-1):
+    a1=a1+1
+    b1=bin(a1)
+    c1=str(b1)
+    d1=c1.split("b")
+    e1=d1[1]
+    n1=len(e1)
+    n2=n-n1
+    f1=['0' for i in range(n2)]
+    for i in e1:
+        f1.append(str(i))
+    #print(f1)
+    table.append(f1)
+j=0
+for i in table:
+    k="".join(i)
+    #print(k)
+    v=int(n)
+    print("{0:>3}>>>>>>>>{1:>6}".format(j,k))
+    j=j+1
